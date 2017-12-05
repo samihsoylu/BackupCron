@@ -1,6 +1,10 @@
 # DIRECTORIES TO IGNORE
 /vendor/
+/logs/*
 
 # FILES TO IGNORE
 .DS_Store
 .env
+
+# EXCEPTIONS
+!/logs/.gitkeep
