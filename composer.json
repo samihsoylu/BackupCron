@@ -1,0 +1,21 @@
+{
+    "name": "nivano/backupscript",
+    "description": "The package is designed to back up pre defined locations and uplaod them to an external location using webdav",
+    "type": "project",
+    "license": "OpenSource",
+    "authors": [
+        {
+            "name": "Samih Soylu",
+            "email": "samih@nivano.nl"
+        }
+    ],
+    "require": {
+        "sabre/dav": "^3.2",
+        "phpmailer/phpmailer": "^6.0",
+        "ext-mbstring": "^7.1",
+        "symfony/polyfill-mbstring": "^1.6",
+        "stevenmaguire/oauth2-microsoft": "^2.2",
+        "psr/log": "^1.0",
+        "league/oauth2-google": "^2.0"
+    }
+}
