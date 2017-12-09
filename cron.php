@@ -22,11 +22,11 @@ try {
   # Back up the uploads directory
   $backup->CreateUploadsZIP();
 
-  # Get backed up zip paths;
+  # Get backed up zip paths (path/to/filename.zip);
   $dumped_sql_path     = $backup->get_path_of_dumped_sql();
   $zipped_uploads_path = $backup->get_path_of_zipped_uploads();
 
-  # Get file names of backed up files
+  # Get file names of backed up files (filename.zip)
   $dumped_sql_filename     = $backup->get_filename_of_dumped_sql();
   $zipped_uploads_filename = $backup->get_filename_of_zipped_uploads();
 
@@ -57,6 +57,10 @@ try {
   # Upload to WebDav server
   $db_upload_response  = $client->request('PUT', $init['webdav']['sql_backup_dir'].$dumped_sql_filename, fopen($dumped_sql_path, 'r'));
   $zip_upload_response = $client->request('PUT', $init['webdav']['uploads_backup_dir'].$zipped_uploads_filename, fopen($zipped_uploads_path, 'r'));
+
+  # Delete the files after sync;
+  unlink($dumped_sql_path);
+  unlink($zipped_uploads_path);
 
   unset($client);
 
