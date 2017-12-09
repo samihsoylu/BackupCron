@@ -9,6 +9,10 @@ class JSONFile {
   */
   public static function read($file, $openMode='r') {
 
+    if(!file_exists($file)) {
+      throw new Exception("File '".$file."' in parameter does not exist, please make sure the file exists.");
+    }
+
     # Opens
     $f = fopen($file, $openMode);
 
