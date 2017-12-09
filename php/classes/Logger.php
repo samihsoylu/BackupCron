@@ -12,7 +12,7 @@ class Logger {
   public static function SaveError($errorName, $errorMessage, $init) {
 
     # Where the error will be saved
-    $errorFile = $init['BASE_PATH'].'logs/'.$errorName.'.log';
+    $errorFile = BASE_PATH.'logs/'.$errorName.'.log';
 
     # Before the error message, date is displayed
     $date_of_error = "[".date('d M Y H:i:s')."] :: ";
