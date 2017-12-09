@@ -58,14 +58,6 @@ try {
   $db_upload_response  = $client->request('PUT', $init['webdav']['sql_backup_dir'].$dumped_sql_filename, fopen($dumped_sql_path, 'r'));
   $zip_upload_response = $client->request('PUT', $init['webdav']['uploads_backup_dir'].$zipped_uploads_filename, fopen($zipped_uploads_path, 'r'));
 
-  # Check server response
-  $err = '';
-  if($db_upload_response['statusCode'] != 201){ $err = 'Database upload has failed'; }
-  if($zip_upload_response['statusCode'] != 201) { $err .= ' & ZIP upload has failed'; }
-
-  # Throws error if server response is not 201
-  if(!empty($err)) { throw new Exception($err); }
-
   unset($client);
 
 } catch (Exception $e) {
