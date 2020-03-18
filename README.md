@@ -1,5 +1,5 @@
 # BackupCron
-BackupCron is a simple tool that periodically makes backups of your website and database. Initially designed for a WordPress website, you can expect it work on any web server. To completely understand how this tool works, it is advised to look in to the code =)
+BackupCron is a simple tool that periodically makes backups of your website and database. Initially designed for a WordPress website, you can expect it to work on any web server. To completely understand how this tool works, it is advised to look in to the code =)
 
 The tool does the following:
 * Back up a PHP project
