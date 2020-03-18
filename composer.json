@@ -1,12 +1,12 @@
 {
-    "name": "nivano/backupscript",
+    "name": "samihsoylu/backupscript",
     "description": "The package is designed to back up pre defined locations and uplaod them to an external location using webdav",
     "type": "project",
-    "license": "OpenSource",
+    "license": "MIT",
     "authors": [
         {
             "name": "Samih Soylu",
-            "email": "samih@nivano.nl"
+            "email": "mail@samihsoylu.nl"
         }
     ],
     "require": {
